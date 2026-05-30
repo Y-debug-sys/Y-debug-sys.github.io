@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with This Blog - Xinyu Yuan</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicons/zju-badge-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicons/zju-badge-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicons/zju-badge-16x16.png">
+  <link rel="shortcut icon" href="../../images/favicons/zju-badge-favicon.ico">
+
+  <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../../css/style.css?v=bc5ea2" rel="stylesheet">
+
+  <style>
+    .post-container { max-width: 720px; margin: 0 auto; }
+    .post-header { text-align: center; padding: 50px 0 20px; }
+    .post-header h1 { font-size: 30px; margin-bottom: 6px; line-height: 1.35em; }
+    .post-header .post-date { font-size: 13px; color: #999; font-family: 'Varela Round', sans-serif; }
+    .post-body { color: #444; font-size: 16px; line-height: 1.75em; }
+    .post-body h2 { font-size: 22px; margin: 32px 0 12px; color: #333; }
+    .post-body h3 { font-size: 18px; margin: 24px 0 10px; color: #333; }
+    .post-body p { margin: 0 0 16px; }
+    .post-body ul, .post-body ol { margin: 0 0 16px; padding-left: 24px; }
+    .post-body li { margin-bottom: 6px; }
+    .post-body code { background: #f3f5f7; padding: 2px 6px; border-radius: 3px; font-size: 14px; color: #c0392b; }
+    .post-body pre { background: #f8f8f8; border: 1px solid #e8e8e8; border-radius: 4px; padding: 14px 18px; overflow-x: auto; font-size: 14px; line-height: 1.5em; }
+    .post-body pre code { background: none; padding: 0; color: #444; }
+    .post-body blockquote { border-left: 3px solid #4682b4; margin: 0 0 16px; padding: 8px 16px; color: #666; background: #f8f8f8; }
+    .post-body img { max-width: 100%; border-radius: 4px; margin: 12px 0; }
+    .post-body a { color: #4682b4; }
+    .post-body a:hover { color: #91d9ec; }
+    .post-nav { max-width: 720px; margin: 50px auto 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; }
+    .post-nav a { font-size: 14px; color: #999; }
+    .post-nav a:hover { color: #4682b4; }
+  </style>
+</head>
+
+<body>
+  <section class="home-section">
+    <div class="container">
+      <div class="post-container">
+
+        <div class="post-header">
+          <h1>Getting Started with This Blog</h1>
+          <div class="post-date">May 30, 2026</div>
+        </div>
+
+        <div class="post-body">
+
+          <p>Welcome! This page explains how to write and publish new blog posts on this site.</p>
+
+          <h2>How to Write a New Post</h2>
+
+          <ol>
+            <li><strong>Copy the template:</strong> Copy <code>blog/posts/template.html</code> to a new file, e.g. <code>blog/posts/my-post.html</code>.</li>
+            <li><strong>Fill in the content:</strong>
+              <ul>
+                <li>Replace <code>TITLE</code> in the <code>&lt;title&gt;</code> tag and <code>&lt;h1&gt;</code> with your post title.</li>
+                <li>Replace <code>DATE</code> with the publication date (e.g. <code>June 5, 2026</code>).</li>
+                <li>Write your content inside the <code>&lt;div class="post-body"&gt;</code> section.</li>
+              </ul>
+            </li>
+            <li><strong>Link it on the blog index:</strong> Open <code>blog/index.html</code> and add a new <code>&lt;li&gt;</code> entry to the <code>.post-list</code>, following the existing format:
+              <pre><code>&lt;li&gt;
+  &lt;div class="post-date"&gt;June 5, 2026&lt;/div&gt;
+  &lt;h3 class="post-title"&gt;&lt;a href="posts/my-post.html"&gt;My Post Title&lt;/a&gt;&lt;/h3&gt;
+  &lt;p class="post-excerpt"&gt;A short one-line summary.&lt;/p&gt;
+&lt;/li&gt;</code></pre>
+            </li>
+            <li><strong>Deploy:</strong> Push the changes to GitHub Pages — the new post will be live.</li>
+          </ol>
+
+          <h2>Writing Tips</h2>
+
+          <p>You can use standard HTML tags inside <code>.post-body</code>:</p>
+
+          <ul>
+            <li><code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> — section headings</li>
+            <li><code>&lt;p&gt;</code> — paragraphs</li>
+            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> — lists</li>
+            <li><code>&lt;code&gt;</code> — inline code</li>
+            <li><code>&lt;pre&gt;&lt;code&gt;</code> — code blocks</li>
+            <li><code>&lt;blockquote&gt;</code> — quoted text</li>
+            <li><code>&lt;img src="..."&gt;</code> — images</li>
+            <li><code>&lt;a href="..."&gt;</code> — links</li>
+            <li><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> — bold and italic</li>
+          </ul>
+
+          <p>Place images in <code>blog/images/</code> and reference them as <code>&lt;img src="../images/your-image.png"&gt;</code> (from a post file in <code>posts/</code>).</p>
+
+        </div>
+
+        <div class="post-nav">
+          <a href="../index.html"><i class="fa fa-arrow-left"></i> All Posts</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
