@@ -28,9 +28,11 @@
     });
 
     // Toggle publication abstract/details
-    $(document).on('click', '.pub-toggle', function() {
+    $(document).on('click', '.publication', function(e) {
+        // Don't toggle when clicking links or tags
+        if ($(e.target).closest('a, .tag').length) return;
         var $this = $(this);
-        var $details = $this.parent().next('.pub-details');
+        var $details = $this.next('.pub-details');
         $this.toggleClass('expanded');
         $details.toggleClass('show');
 

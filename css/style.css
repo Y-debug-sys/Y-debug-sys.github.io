@@ -418,6 +418,26 @@ hr {
   padding-top:0px;
   padding-bottom:0px;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.publication::after {
+  content: "\f054";
+  font-family: FontAwesome;
+  font-size: 13px;
+  color: #bbb;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease, color 0.2s;
+}
+.publication:hover::after {
+  color: #4682b4;
+}
+.publication.expanded::after {
+  transform: translateY(-50%) rotate(90deg);
+  color: #4682b4;
 }
 .publication .img {
   max-width:300px;
@@ -638,15 +658,6 @@ span.tag{
 --- Pub Details (expandable)
 ============================ */
 
-.pub-toggle {
-  cursor: pointer;
-  color: #4682b4;
-  font-size: 14px;
-  font-weight: 600;
-  padding-left: 4px;
-  user-select: none;
-  -webkit-user-select: none;
-}
 .pub-rank {
   float: right;
   font-size: 12px;
@@ -661,17 +672,6 @@ span.tag{
 .pub-rank.ccf-c { background: #27ae60; }
 .pub-rank.jcr-q1 { background: #8e44ad; }
 .pub-rank.jcr-q2 { background: #2980b9; }
-.pub-toggle:hover {
-  color: #91d9ec;
-}
-.pub-toggle .fa {
-  margin-right: 4px;
-  transition: transform 0.3s ease;
-}
-.pub-toggle.expanded .fa {
-  transform: rotate(90deg);
-}
-
 .pub-details {
   max-height: 0;
   overflow: hidden;
@@ -713,6 +713,11 @@ span.tag{
   color: #555;
   text-align: justify;
   overflow-y: auto;
+}
+.pub-abstract > p::before {
+  content: "Abstract: ";
+  font-weight: 700;
+  color: #333;
 }
 .pub-details-content.no-img .pub-abstract {
   flex: 1;
