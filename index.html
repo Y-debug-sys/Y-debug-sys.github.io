@@ -139,13 +139,13 @@
               <h3>
                 <i class="fa fa-file-text-o"></i> <a target="_blank" href="https://scholar.google.com/citations?user=n7Oy3WcAAAAJ&hl=en">Publications</a>
                 <span class="pub-stats-inline">
-                  <span class="pub-stat"><span class="pub-stat-num">10</span> Papers</span>
+                  <span class="pub-stat"><span class="pub-stat-num">11</span> Papers</span>
                   <span class="pub-divider">|</span>
-                  <span class="pub-stat"><span class="pub-stat-num">10</span> Open-Source</span>
+                  <span class="pub-stat"><span class="pub-stat-num">11</span> Open-Source</span>
                   <span class="pub-divider">|</span>
-                  <span class="pub-stat"><span class="pub-stat-num">7</span> CCF-A</span>
+                  <span class="pub-stat"><span class="pub-stat-num">8</span> CCF-A</span>
                   <span class="pub-divider">|</span>
-                  <span class="pub-stat"><span class="pub-stat-num">6</span> 1<sup>st</sup> Author</span>
+                  <span class="pub-stat"><span class="pub-stat-num">7</span> 1<sup>st</sup> Author</span>
                   <span class="pub-divider">|</span>
                   <span class="pub-stat"><span class="pub-stat-num">0</span> Corresponding</span>
                 </span>
@@ -154,6 +154,33 @@
 
             <div class="pub-scroll">
             <ul class="pub-list">
+
+              <li>
+                <div class="publication">
+                  <div class="text">
+                    <div class="title">
+                      On the (Generative) Linear Sketching Problem
+                    </div>
+                    <div class="authors">
+                      <span class="cd">Xinyu Yuan</span>, Yan Qiao, Zonghui Wang<span class="corr"><i class="fa fa-envelope"></i></span> and Wenzhi Chen<span class="corr"><i class="fa fa-envelope"></i></span>
+                    </div>
+                  </div>
+                  <div class="venue">To Appear in IEEE International Conference on Data Engineering <span class="venue-st">(ICDE)</span>, Copenhagen, Denmark, 2027</div>
+                  <span class="tag"><a target="_blank" href="https://arxiv.org/abs/2603.14474">[Paper]</a></span>
+                  <span class="tag"><a target="_blank" href="https://github.com/Y-debug-sys/">[Code]</a></span>
+                  <span class="pub-rank ccf-a">CCF-A</span>
+                </div>
+                <div class="pub-details">
+                  <div class="pub-details-content">
+                    <div class="pub-img">
+                      <img src="images/linear-sketching.png" alt="Linear Sketching Overview">
+                    </div>
+                    <div class="pub-abstract">
+                      <p>Sketch techniques have been extensively studied in recent years and are especially well-suited to data streaming scenarios, where the sketch summary is updated quickly and compactly. However, it is challenging to recover the current state from these summaries in a way that is accurate, fast, and real. In this paper, we seek a new solution that reconciles this tension, aiming for near-perfect recovery with lightweight computational procedures. Focusing on linear sketching problems of the form Φf → f, our study proceeds in three phases. First, we revisit existing techniques and show the root cause of the dilemma: an orthogonal information loss during the summarization process. Second, we investigate how generative priors can be leveraged to bridge the gap and thereby allow theoretically superior recovery. Third, we present FLORE, the first generative sketching paradigm to embrace these analyses. At its core, FLORE integrates invertible flows with efficient sketch instances to achieve the best of two worlds. More importantly, FLORE can be trained online without access to ground-truth data, which is readily deployable in practice. Comprehensive experiments demonstrate FLORE's ability to provide high-quality recovery, and support summary with low computing overhead, outperforming previous methods by up to 1000× in error reduction and 100× in processing speed compared to learning-based solutions. Our codebase and technique report are available at Anonymous GitHub, with experimental datasets attached in the supplementary material.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
 
               <li>
                 <div class="publication">
@@ -438,30 +465,7 @@ Our design introduces two key innovations: (i) an online training mechanism base
 
             <ul class="pub-list">
 
-              <li>
-                <div class="publication">
-                  <div class="text">
-                    <div class="title">
-                      On the (Generative) Linear Sketching Problem
-                    </div>
-                    <div class="authors">
-                      <span class="cd">Xinyu Yuan</span>, Yan Qiao, Zonghui Wang<span class="corr"><i class="fa fa-envelope"></i></span> and Wenzhi Chen<span class="corr"><i class="fa fa-envelope"></i></span>
-                    </div>
-                  </div>
-                  <span class="tag"><a target="_blank" href="https://arxiv.org/abs/2603.14474">[Preprint]</a></span>
-                  <span class="tag"><a target="_blank" href="https://github.com/Y-debug-sys/">[Code]</a></span>
-                </div>
-                <div class="pub-details">
-                  <div class="pub-details-content">
-                    <div class="pub-img">
-                      <img src="images/linear-sketching.png" alt="Linear Sketching Overview">
-                    </div>
-                    <div class="pub-abstract">
-                      <p>Sketch techniques have been extensively studied in recent years and are especially well-suited to data streaming scenarios, where the sketch summary is updated quickly and compactly. However, it is challenging to recover the current state from these summaries in a way that is accurate, fast, and real. In this paper, we seek a new solution that reconciles this tension, aiming for near-perfect recovery with lightweight computational procedures. Focusing on linear sketching problems of the form Φf → f, our study proceeds in three phases. First, we revisit existing techniques and show the root cause of the dilemma: an orthogonal information loss during the summarization process. Second, we investigate how generative priors can be leveraged to bridge the gap and thereby allow theoretically superior recovery. Third, we present FLORE, the first generative sketching paradigm to embrace these analyses. At its core, FLORE integrates invertible flows with efficient sketch instances to achieve the best of two worlds. More importantly, FLORE can be trained online without access to ground-truth data, which is readily deployable in practice. Comprehensive experiments demonstrate FLORE's ability to provide high-quality recovery, and support summary with low computing overhead, outperforming previous methods by up to 1000× in error reduction and 100× in processing speed compared to learning-based solutions. Our codebase and technique report are available at Anonymous GitHub, with experimental datasets attached in the supplementary material.</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
+              <!--  -->
 
             </ul>
 
